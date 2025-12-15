@@ -210,15 +210,15 @@ body {
 .about-img {
     width: 482px;
     height: 592px;
-    overflow: hidden;  
+    overflow: hidden;
 }
 
 .abt-res {
-   width: 100%;
+    width: 100%;
     height: 100%;
     border-radius: 90px;
-    border: #0ef 5px solid; 
-    object-fit: cover;     
+    border: #0ef 5px solid;
+    object-fit: cover;
     object-position: center;
     transform: scale(1.2);
 }
@@ -1026,55 +1026,56 @@ body {
         color: #000;
     }
 }
+
 .about-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     grid-template-areas:
-      "text-top text-top"
-      "image text-side"
-      "text-bottom text-bottom";
+        "text-top text-top"
+        "image text-side"
+        "text-bottom text-bottom";
     gap: 30px;
     padding: 40px 20px;
     max-width: 1100px;
     margin: auto;
     align-items: start;
-  }
-  
-  .about-text-top {
+}
+
+.about-text-top {
     grid-area: text-top;
     color: #fff;
-  }
-  
-  .about-text-side {
+}
+
+.about-text-side {
     grid-area: text-side;
     color: #fff;
     line-height: 1.8;
-  }
-  
-  .about-text-bottom {
+}
+
+.about-text-bottom {
     grid-area: text-bottom;
     color: #fff;
-  }
-  
-  .about-img {
+}
+
+.about-img {
     grid-area: image;
     display: flex;
     justify-content: center;
-  }
-  
+}
 
-  
-  .about-text-top h2 {
+
+
+.about-text-top h2 {
     font-size: 36px;
     color: #fff;
     margin-bottom: 10px;
-  }
-  
-  .about-text-top span {
+}
+
+.about-text-top span {
     color: cyan;
-  }
-  
-  .abtbtn-box {
+}
+
+.abtbtn-box {
     display: inline-block;
     margin-top: 20px;
     padding: 10px 25px;
@@ -1084,27 +1085,28 @@ body {
     text-decoration: none;
     font-weight: bold;
     transition: background 0.3s ease;
-  }
-  
-  .abtbtn-box:hover {
+}
+
+.abtbtn-box:hover {
     background: #00e1ff;
-  }
-  
-  /* Mobile Friendly */
-  @media (max-width: 768px) {
+}
+
+/* Mobile Friendly */
+@media (max-width: 768px) {
     .about-grid {
-      grid-template-areas:
-        "text-top"
-        "image"
-        "text-side"
-        "text-bottom";
+        grid-template-areas:
+            "text-top"
+            "image"
+            "text-side"
+            "text-bottom";
     }
-  
+
     .about-text-side, .about-text-top, .about-text-bottom {
-      text-align: center;
+        text-align: center;
     }
-  }
-  .stepper-container {
+}
+
+.stepper-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1129,7 +1131,8 @@ body {
     color: #ddd;
     width: 100%;
     max-width: 100%;
-    min-height: 120px; /* Equal height */
+    min-height: 120px;
+    /* Equal height */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1150,6 +1153,7 @@ body {
     height: 30px;
     background-color: cyan;
 }
+
 /* Ongoing Projects Section */
 .sub-text {
     text-align: center;
@@ -1225,6 +1229,7 @@ body {
     align-items: center;
     gap: 6px;
 }
+
 /* Project Grid */
 .project-grid {
     display: grid;
@@ -1242,6 +1247,8 @@ body {
     border-radius: 22px;
     padding: 25px;
     transition: all 0.3s ease;
+    flex-direction: column;
+    height: 100%;
 }
 
 .project-item:hover {
@@ -1275,6 +1282,12 @@ body {
     line-height: 1.6;
 }
 
+.project-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
 /* Tags */
 .project-tags {
     margin-top: 12px;
@@ -1293,25 +1306,56 @@ body {
 
 /* Buttons */
 .project-actions {
-    margin-top: 14px;
+    /* margin-top: 14px; */
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin-top: 20px;
+
+
 }
 
+
 .project-actions a {
-    display: inline-flex;
+    display: flex;
     align-items: center;
+    justify-content: center;
     gap: 6px;
+
+    height: 36px;
+    padding: 0 16px;
+
     color: #000;
     background: #0ef;
-    padding: 8px 16px;
     border-radius: 20px;
     font-size: 13px;
     font-weight: bold;
     transition: 0.3s;
 }
 
+.project-actions a.demo {
+    background: transparent;
+    color: #0ef;
+    border: 2px solid #0ef;
+}
+
+
 .project-actions a:hover {
     background: #00c7d6;
 }
+
+.project-actions a.demo {
+    background: transparent;
+    color: #0ef;
+    border: 2px solid #0ef;
+}
+
+.project-actions a.demo:hover {
+    background: rgb(0, 0, 0);
+    color: #0ef;
+}
+
 /* Ongoing card with image */
 .ongoing-card.with-image {
     display: flex;
