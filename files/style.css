@@ -20,6 +20,235 @@ body {
     border-radius: 6px;
 }
 
+.about-v2{
+    padding:120px 10%;
+    background:#000;
+}
+
+.about-wrapper{
+    display:grid;
+    grid-template-columns:340px 1fr;
+    gap:60px;
+    align-items:start;
+}
+
+.profile-box{
+    position:sticky;
+    top:120px;
+}
+
+.profile-box img{
+    width:100%;
+    height:500px;
+    object-fit:cover;
+    border-radius:28px;
+    border:2px solid #0ef;
+    box-shadow:0 0 35px rgba(0,238,255,.25);
+}
+
+.status{
+    margin-top:20px;
+    background:#111;
+    border:1px solid rgba(0,238,255,.25);
+    padding:14px;
+    border-radius:16px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.status span{
+    width:10px;
+    height:10px;
+    background:#00ff88;
+    border-radius:50%;
+}
+
+.small-title{
+    color:#0ef;
+    letter-spacing:4px;
+    font-size:13px;
+    margin-bottom:8px;
+}
+
+.about-content h2{
+    font-size:48px;
+    margin-bottom:15px;
+}
+
+.about-content h2 span{
+    color:#0ef;
+}
+
+.intro{
+    font-size:18px;
+    line-height:1.8;
+    color:#ddd;
+    margin-bottom:35px;
+}
+
+.info-card{
+    display:flex;
+    gap:18px;
+    background:#111;
+    border:1px solid rgba(0,238,255,.2);
+    border-radius:22px;
+    padding:22px;
+    margin-bottom:22px;
+    transition:.3s;
+}
+
+.info-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 0 25px rgba(0,238,255,.18);
+}
+
+.info-card i{
+    font-size:28px;
+    color:#0ef;
+    margin-top:5px;
+}
+
+.info-card h3{
+    color:white;
+    margin-bottom:8px;
+}
+
+.info-card p{
+    color:#cfcfcf;
+    line-height:1.7;
+}
+
+.skill-tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-top:10px;
+}
+
+.skill-tags span{
+    padding:8px 14px;
+    border-radius:999px;
+    background:rgba(0,238,255,.08);
+    border:1px solid rgba(0,238,255,.25);
+    color:#0ef;
+    font-size:13px;
+}
+
+.cta{
+    margin-top:35px;
+}
+
+.cta p{
+    margin-top:20px;
+    color:#bbb;
+    line-height:1.7;
+}
+
+@media(max-width:900px){
+
+.about-wrapper{
+grid-template-columns:1fr;
+}
+
+.profile-box{
+position:relative;
+top:0;
+max-width:320px;
+margin:auto;
+}
+
+.about-content{
+text-align:center;
+}
+
+.info-card{
+text-align:left;
+}
+}
+
+
+
+.project-showcase{
+    display:flex;
+    flex-direction:column;
+    gap:22px;
+}
+
+.project-header{
+    display:flex;
+    align-items:center;
+    gap:18px;
+}
+
+.project-header i{
+    font-size:36px;
+}
+
+.project-header h3{
+    margin:0;
+}
+
+.project-header p{
+    color:#aaa;
+}
+
+.project-stats{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+}
+
+.stat{
+    background:#161616;
+    border:1px solid rgba(0,238,255,.2);
+    border-radius:18px;
+    padding:18px;
+    text-align:center;
+}
+
+.stat h2{
+    color:#0ef;
+    font-size:28px;
+}
+
+.stat span{
+    color:#bbb;
+    font-size:13px;
+}
+
+.project-chips{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.project-chips span{
+    padding:8px 14px;
+    border-radius:999px;
+    border:1px solid rgba(0,238,255,.25);
+    background:rgba(0,238,255,.08);
+    color:#0ef;
+    font-size:13px;
+}
+
+.github-btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    width:fit-content;
+    padding:12px 22px;
+    border-radius:999px;
+    background:#0ef;
+    color:#000;
+    font-weight:600;
+    text-decoration:none;
+}
+
+.github-btn:hover{
+    box-shadow:0 0 25px rgba(0,238,255,.5);
+}
 /*navbar*/
 
 .header {
@@ -1164,11 +1393,13 @@ body {
 
 .ongoing-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
     padding: 40px 8%;
+    align-items: stretch;
 }
 
+/* Ongoing Card */
 .ongoing-card {
     position: relative;
     background: rgba(255, 255, 255, 0.05);
@@ -1176,6 +1407,10 @@ body {
     border-radius: 20px;
     padding: 30px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    /* Equal height */
+    height: 100%;
+    display: flex;
 }
 
 .ongoing-card:hover {
@@ -1195,17 +1430,54 @@ body {
     border-radius: 20px;
 }
 
-.ongoing-card h3 {
-    margin-bottom: 10px;
-    color: #0ef;
+/* Card with Image */
+.ongoing-card.with-image {
+    display: flex;
+    gap: 25px;
+    align-items: flex-start;
 }
 
-.ongoing-card p {
+/* Image */
+.ongoing-img {
+    min-width: 160px;
+    width: 160px;
+    height: 160px;
+    flex-shrink: 0;
+    border-radius: 18px;
+    overflow: hidden;
+    border: 1px solid rgba(0, 238, 255, 0.4);
+}
+
+.ongoing-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Content */
+.ongoing-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 0;
+}
+
+.ongoing-content h3 {
+    color: #0ef;
+    margin-bottom: 10px;
+    min-height: 48px;
+}
+
+.ongoing-content p {
     font-size: 14px;
     line-height: 1.6;
     color: #ddd;
+
+    /* Make description area equal */
+    min-height: 170px;
 }
 
+/* Technology tags */
 .tech-stack {
     margin-top: 15px;
     display: flex;
@@ -1221,13 +1493,63 @@ body {
     font-size: 12px;
 }
 
-.company {
-    margin-top: 18px;
-    font-size: 13px;
-    color: #ccc;
+/* GitHub button */
+.project-actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: nowrap;
+
+    /* Push button to same bottom position */
+    margin-top: auto;
+    padding-top: 20px;
+}
+
+.project-actions a {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 6px;
+    height: 36px;
+    padding: 0 16px;
+    color: #000;
+    background: #0ef;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.project-actions a:hover {
+    background: #00c7d6;
+}
+
+
+/* Mobile responsive */
+@media (max-width: 1000px) {
+    .ongoing-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .ongoing-card.with-image {
+        flex-direction: column;
+    }
+
+    .ongoing-img {
+        width: 100%;
+        height: 200px;
+    }
+
+    .ongoing-content h3 {
+        min-height: auto;
+    }
+
+    .ongoing-content p {
+        min-height: auto;
+    }
 }
 
 /* Project Grid */

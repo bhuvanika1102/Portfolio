@@ -1,9 +1,15 @@
 
 var typed = new Typed(".text", {
-    strings: ["Full Stack Web Application", "Data Structures", "SpringBoot"],
-    typeSpeed: 100,
-    backSpeed: 100,
-    backDelay: 1000,
+    strings: [
+        "Full Stack Development",
+        "Oracle HeatWave AutoML",
+        "Machine Learning",
+        "Deep Learning",
+       
+    ],
+    typeSpeed: 90,
+    backSpeed: 60,
+    backDelay: 1200,
     loop: true
 });
 
